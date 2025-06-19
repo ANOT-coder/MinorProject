@@ -1,0 +1,116 @@
+:root {
+  --primary-color: #41826E;
+  --text-color: #000;
+  --input-bg: #fff;
+  --input-border: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+/* Fix overflow issue */
+.login-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 380px;
+  width: 120%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ensuring form elements stay inside */
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+/* Error text styling */
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Fix input width */
+.login-input {
+  width: calc(100% - 24px); /* Ensures input doesn't exceed container width */
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.login-input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Fix button width */
+.login-button {
+  width: calc(100% - 24px); /* Makes sure it fits within the container */
+  padding: 12px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background: #2d6a4f;
+}
+
+/* Scoped link styles */
+.login-links {
+  margin-top: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.login-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .login-container {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+}

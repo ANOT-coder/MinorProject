@@ -1,0 +1,140 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box; 
+    background: #f5f5f5; /* Ensures padding and margins are included in element size */
+}
+
+/* Portfolio Page Styles */
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+    width: 100%;
+    background: #f5f5f5;
+    padding: 20px; 
+    box-sizing: border-box;
+    margin-top: 100px;
+    
+    /* Fade-in animation */
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+/* Portfolio Content Box */
+.portfolio-content {
+    margin-top: 250px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+
+    /* Slide-up animation */
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideUp 0.8s ease-in-out 0.2s forwards;
+}
+
+/* Smooth transition animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Chart Container */
+.chart-container {
+    height: 250px;
+    width: 100%;
+    margin: 30px 0;
+    position: relative;
+    max-width: 800px;
+}
+
+/* Portfolio Breakdown Table */
+.chart-description {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+    max-width: 800px;
+}
+
+.portfolio-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.portfolio-table th, .portfolio-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.portfolio-table th {
+    background-color: #41826E;
+    color: white;
+    font-weight: bold;
+}
+
+.portfolio-table td {
+    background-color: #f9f9f9;
+}
+
+/* Style for portfolio category color squares */
+.color-box {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .portfolio-container {
+        padding: 10px;
+    }
+
+    .portfolio-content {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .chart-container {
+        height: 250px;
+    }
+
+    .chart-description {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-table th, .portfolio-table td {
+        font-size: 0.9rem;
+    }
+}

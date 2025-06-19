@@ -1,0 +1,88 @@
+/* Global Reset for Body */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Navbar Styles */
+/* Navbar Styles */
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: #41826E; /* Main color */
+    padding: 4px 30px; /* Reduced height by adjusting vertical padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical alignment of all items */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    overflow: hidden; /* Prevents scrolling inside the navbar */
+    box-sizing: border-box; /* Include padding in width calculation */
+    min-height: 70px; /* Ensures a reasonable height without overflow */
+    max-height: 90px; /* Limits excessive height */
+}
+
+
+/* Adjust padding in navbar container instead */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px; /* Set padding to give space to navbar content */
+    margin: 0 auto;
+}
+
+
+
+/* Logo Styling */
+.navbar-logo {
+    width: 120px; /* Logo width */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Navbar Links Styling */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Consistent font */
+    align-items: center; /* Ensures vertical centering of links */
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500; /* Slightly bolder for readability */
+}
+
+
+.logout-button {
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Optional: makes it look like a clickable button */
+    outline: none; /* Removes the default focus outline */
+}
+
+.logout-button:hover {
+    background-color: transparent; /* Ensures background remains transparent on hover */
+    color: #fff; /* Keeps text color white on hover */
+}
+
+.logout-button:focus {
+    outline: none; /* Removes focus outline */
+}
